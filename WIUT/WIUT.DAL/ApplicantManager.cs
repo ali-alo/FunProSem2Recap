@@ -9,14 +9,16 @@ using System.Windows.Forms;
 
 namespace WIUT.DAL
 {
-    class CourseManager
+    class ApplicantManager
     {
-        public void Create(Course c)
+        public void Create(Applicant a)
         {
             var connection = new SqlCeConnection("");
             try
             {
-                var sql = $"INSERT INTO Course (Name) VALUES ('{c.Name}')";
+                var sql = $@"
+INSERT INTO Applicant (Name, Surname, Address, DoB, MaritalStatus, PassportNo, CourseId) 
+VALUES('{a.Name}', '{a.Surname}', '{a.Address}', '{a.DoB:yyyy-MM-dd}', '{a.MaritalStatus}', '{a.PassportNo}', {a.Course.Id})";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -34,12 +36,21 @@ namespace WIUT.DAL
             }
         }
 
-        public void Update(Course c)
+        public void Update(Applicant a)
         {
             var connection = new SqlCeConnection("");
             try
             {
-                var sql = $"UPDATE Course SET Name = '{c.Name}' WHERE Id = {c.Id}";
+                var sql = $@"
+UPDATE Applicant SET 
+    Name = '{a.Name}', 
+    Surname = '{a.Surname}', 
+    Address = '{a.Address}', 
+    DoB = '{a.DoB:yyyy-MM-dd}', 
+    MaritalStatus = '{a.MaritalStatus}', 
+    PassportNo = '{a.PassportNo}', 
+    CourseId = {a.Course.Id}
+WHERE Id = {a.Id}";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -62,7 +73,7 @@ namespace WIUT.DAL
             var connection = new SqlCeConnection("");
             try
             {
-                var sql = $"DELETE FROM Course WHERE Id={id}";
+                var sql = $"DELETE FROM Applicant Where Id={id}";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -80,23 +91,22 @@ namespace WIUT.DAL
             }
         }
 
-        public Course GetById(int id)
+        public Applicant GetById(int id)
         {
             var connection = new SqlCeConnection("");
             try
             {
-                var sql = $"SELECT Id, Name FROM Course WHERE ID={id}";
+                var sql = $@"
+Select Id, Name, Surname, Address, DoB, MaritalStatus, PassportNo, CourseId
+FROM Applicant
+WHERE Id = {id}";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
                 var reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    var c = new Course
-                    {
-                        Id = Convert.ToInt32(reader.GetValue(0)),
-                        Name = Convert.ToString(reader.GetValue(1))
-                    };
-                    return c;
+                    var a = GetFromReader(reader);
+                    return a;
                 }
             }
             catch (Exception ex)
@@ -111,27 +121,24 @@ namespace WIUT.DAL
                 }
             }
 
+            // if we are here - something went wrong
             return null;
         }
 
-        public List<Course> GetAll()
+        public List<Applicant> GetAll()
         {
             var connection = new SqlCeConnection("");
-            var result = new List<Course>();
+            var result = new List<Applicant>();
             try
             {
-                var sql = "SELECT Id, Name FROM Course";
+                var sql = "SELECT Id, Name, Surname, Address, DoB, MaritalStatus, PassportNo, CourseId FROM Applicant";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    var c = new Course
-                    {
-                        Id = Convert.ToInt32(reader.GetValue(0)),
-                        Name = Convert.ToString(reader.GetValue(1))
-                    };
-                    result.Add(c);
+                    var a = GetFromReader(reader);
+                    result.Add(a);
                 }
             }
             catch (Exception ex)
@@ -147,7 +154,23 @@ namespace WIUT.DAL
             }
 
             return result;
+        }
 
+        private Applicant GetFromReader(SqlCeDataReader reader)
+        {
+            var a = new Applicant
+            {
+                Id = Convert.ToInt32(reader.GetValue(0)),
+                Name = reader.GetValue(1).ToString(),
+                Surname = reader.GetValue(2).ToString(),
+                Address = reader.GetValue(3).ToString(),
+                DoB = Convert.ToDateTime(reader.GetValue(4)),
+                MaritalStatus = reader.GetValue(5).ToString(),
+                PassportNo = reader.GetValue(6).ToString(),
+                Course = new CourseManager().GetById(Convert.ToInt32(reader.GetValue(7)))
+            };
+
+            return a;
         }
     }
 }

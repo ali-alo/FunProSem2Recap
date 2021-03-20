@@ -46,7 +46,7 @@
             // 
             // btnTest
             // 
-            this.btnTest.Location = new System.Drawing.Point(236, 128);
+            this.btnTest.Location = new System.Drawing.Point(467, 115);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(75, 23);
             this.btnTest.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // tbxTest
             // 
-            this.tbxTest.Location = new System.Drawing.Point(32, 129);
+            this.tbxTest.Location = new System.Drawing.Point(201, 115);
             this.tbxTest.Name = "tbxTest";
             this.tbxTest.Size = new System.Drawing.Size(175, 22);
             this.tbxTest.TabIndex = 2;
