@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WIUT
+namespace WIUT.DAL
 {
-    class Applicant
+    public class Applicant
     {
         private int Id { get; set; }
         public string Name { get; set; }

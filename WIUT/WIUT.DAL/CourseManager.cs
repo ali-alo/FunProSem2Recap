@@ -1,0 +1,136 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlServerCe;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WIUT.DAL
+{
+    class CourseManager
+    {
+        public void Create(Course c)
+        {
+
+        }
+
+        public void Update(Course c)
+        {
+            var connection = new SqlCeConnection("");
+            try
+            {
+                var sql = $"INSERT INTO Course (Name) VALUES ('{c.Name}')";
+                var command = new SqlCeCommand(sql, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (connection.State != ConnectionState.Closed)
+                {
+                    connection.Close();
+                }
+            }
+
+        }
+
+        public void Delete(int id)
+        {
+            var connection = new SqlCeConnection("");
+            try
+            {
+                var sql = $"DELETE FROM Course WHERE Id={id}";
+                var command = new SqlCeCommand(sql, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (connection.State != ConnectionState.Closed)
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        public Course GetById(int id)
+        {
+            var connection = new SqlCeConnection("");
+            try
+            {
+                var sql = $"SELECT Id, Name FROM Course WHERE ID={id}";
+                var command = new SqlCeCommand(sql, connection);
+                connection.Open();
+                var reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    var c = new Course
+                    {
+                        Id = Convert.ToInt32(reader.GetValue(0)),
+                        Name = Convert.ToString(reader.GetValue(1))
+                    };
+                    return c;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (connection.State != ConnectionState.Closed)
+                {
+                    connection.Close();
+                }
+            }
+
+            return null;
+        }
+
+        public List<Course> GetAll()
+        {
+            var connection = new SqlCeConnection("");
+            var result = new List<Course>();
+            try
+            {
+                var sql = "SELECT Id, Name FROM Course";
+                var command = new SqlCeCommand(sql, connection);
+                connection.Open();
+                var reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    var c = new Course
+                    {
+                        Id = Convert.ToInt32(reader.GetValue(0)),
+                        Name = Convert.ToString(reader.GetValue(1))
+                    };
+                    result.Add(c);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (connection.State != ConnectionState.Closed)
+                {
+                    connection.Close();
+                }
+            }
+
+            return result;
+
+        }
+    }
+}

@@ -28,7 +28,6 @@ namespace WIUT
                 "AA 123456",
                 bis);
             MessageBox.Show($"{applicant.Name} is on {applicant.Course.Name}");
-            MessageBox.Show(applicant.DoB.ToString());
         }
     }
 }
