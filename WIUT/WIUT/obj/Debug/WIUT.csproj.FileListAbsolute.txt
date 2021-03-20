@@ -2,10 +2,14 @@ C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\r
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\bin\Debug\WIUT.exe
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\bin\Debug\WIUT.pdb
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.csprojAssemblyReference.cache
-C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.Form1.resources
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.Properties.Resources.resources
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.csproj.GenerateResource.cache
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.csproj.CoreCompileInputs.cache
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.exe
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.pdb
-C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.DAL.Form1.resources
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.ParentForm.resources
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.AboutForm.resources
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\bin\Debug\WIUT.DAL.dll
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\bin\Debug\WIUT.DAL.pdb
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.csproj.CopyComplete
