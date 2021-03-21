@@ -16,18 +16,21 @@ namespace WIUT.DAL
         // sorting 
         public List<Applicant> Sort(ByAttribute attribute)
         {
+            var applicants = GetAllApplicants();
             switch (attribute)
             {
                 case ByAttribute.Name:
-                    var applicants = GetAllApplicants();
                     applicants.Sort(new ByNameComparer());
                     return applicants;
                 case ByAttribute.Surname:
-                    break;
+                    applicants.Sort(new BySurnameComparer());
+                    return applicants;
                 case ByAttribute.DoB:
-                    break;
+                    applicants.Sort(new ByDobComparer());
+                    return applicants;
                 case ByAttribute.Course:
-                    break;
+                    applicants.Sort(new ByCourseComparer());
+                    return applicants;
             }
 
             //if we are here - something went wrong
@@ -78,7 +81,7 @@ namespace WIUT.DAL
             }
         }
 
-        private class BySurameComparer : IComparer<Applicant>
+        private class BySurnameComparer : IComparer<Applicant>
         {
             public int Compare(Applicant x, Applicant y)
             {

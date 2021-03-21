@@ -15,3 +15,5 @@ C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\r
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.csproj.CopyComplete
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\bin\Debug\WIUT.DAL.dll.config
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\bin\Debug\WIUT.sdf
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.ApplicantListForm.resources
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.CourseListForm.resources

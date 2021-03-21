@@ -31,5 +31,11 @@ namespace WIUT.DAL
         {
             Name = name;
         }
+
+        // to show the name of the Course on the user end
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

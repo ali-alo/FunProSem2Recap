@@ -29,12 +29,14 @@ namespace WIUT
             form.ShowDialog();
         }
 
-        // testing
-        private void ParentForm_Load(object sender, EventArgs e)
+        private void allApplicantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var courseList = new CourseList();
-            var courses = courseList.GetAllCourses();
-            MessageBox.Show(courses.Count.ToString());
+            MyForms.GetForm<ApplicantListForm>().Show();
+        }
+
+        private void allCoursesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyForms.GetForm<CourseListForm>().Show();
         }
     }
 }

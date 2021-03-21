@@ -91,6 +91,7 @@
             this.allApplicantsToolStripMenuItem.Name = "allApplicantsToolStripMenuItem";
             this.allApplicantsToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.allApplicantsToolStripMenuItem.Text = "All applicants";
+            this.allApplicantsToolStripMenuItem.Click += new System.EventHandler(this.allApplicantsToolStripMenuItem_Click);
             // 
             // coursesToolStripMenuItem
             // 
@@ -104,14 +105,15 @@
             // newCourseToolStripMenuItem
             // 
             this.newCourseToolStripMenuItem.Name = "newCourseToolStripMenuItem";
-            this.newCourseToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.newCourseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.newCourseToolStripMenuItem.Text = "New course";
             // 
             // allCoursesToolStripMenuItem
             // 
             this.allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
-            this.allCoursesToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.allCoursesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.allCoursesToolStripMenuItem.Text = "All courses";
+            this.allCoursesToolStripMenuItem.Click += new System.EventHandler(this.allCoursesToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -139,7 +141,6 @@
             this.Name = "ParentForm";
             this.Text = "WIUT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ParentForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

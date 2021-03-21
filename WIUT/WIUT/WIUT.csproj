@@ -52,6 +52,19 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApplicantListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicantListForm.Designer.cs">
+      <DependentUpon>ApplicantListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseListForm.Designer.cs">
+      <DependentUpon>CourseListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyForms.cs" />
     <Compile Include="ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +75,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicantListForm.resx">
+      <DependentUpon>ApplicantListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseListForm.resx">
+      <DependentUpon>CourseListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
@@ -75,6 +94,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\WIUT.DAL.Applicant.datasource" />
+    <None Include="Properties\DataSources\WIUT.DAL.Course.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,6 +119,9 @@
     <Content Include="WIUT.sdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
