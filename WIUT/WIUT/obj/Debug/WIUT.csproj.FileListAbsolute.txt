@@ -17,3 +17,5 @@ C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\r
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\bin\Debug\WIUT.sdf
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.ApplicantListForm.resources
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.CourseListForm.resources
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.CourseEditForm.resources
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT\obj\Debug\WIUT.ApplicantEditForm.resources

@@ -18,11 +18,6 @@ namespace WIUT
             InitializeComponent();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void ApplicantListForm_Load(object sender, EventArgs e)
         {
             // ParentFrom is a MdiParent of the ApplicantListForm
@@ -36,7 +31,7 @@ namespace WIUT
             LoadData();
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             dgv.DataMember = "";
             dgv.DataSource = null;
@@ -79,7 +74,35 @@ namespace WIUT
                 dgv.DataSource = null;
                 dgv.DataSource = new ApplicantList().Search(tbxSearch.Text, selectedAttribute);
             }
+        }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+                MessageBox.Show("Please select an applicant");
+            else
+            {
+                var c = (DAL.Applicant)dgv.SelectedRows[0].DataBoundItem;
+                new ApplicantEditForm().UpdateApplicant(c);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            var form = new ApplicantEditForm();
+            form.CreateNewApplicant();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+                MessageBox.Show("Please select an applicant");
+            else
+            {
+                var c = (DAL.Applicant)dgv.SelectedRows[0].DataBoundItem;
+                new ApplicantManager().Delete(c.Id);
+                LoadData();
+            }
         }
     }
 }

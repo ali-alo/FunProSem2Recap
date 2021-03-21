@@ -30,15 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.cbxSort = new System.Windows.Forms.ComboBox();
-            this.cbxSearch = new System.Windows.Forms.ComboBox();
-            this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.btnSort = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +39,15 @@
             this.passportNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.applicantBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.cbxSort = new System.Windows.Forms.ComboBox();
+            this.cbxSearch = new System.Windows.Forms.ComboBox();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.btnSort = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicantBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -80,6 +80,82 @@
             this.dgv.Size = new System.Drawing.Size(878, 426);
             this.dgv.TabIndex = 0;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.surnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // doBDataGridViewTextBoxColumn
+            // 
+            this.doBDataGridViewTextBoxColumn.DataPropertyName = "DoB";
+            this.doBDataGridViewTextBoxColumn.HeaderText = "Date of birth";
+            this.doBDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.doBDataGridViewTextBoxColumn.Name = "doBDataGridViewTextBoxColumn";
+            this.doBDataGridViewTextBoxColumn.ReadOnly = true;
+            this.doBDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maritalStatusDataGridViewTextBoxColumn
+            // 
+            this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "MaritalStatus";
+            this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "MaritalStatus";
+            this.maritalStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
+            this.maritalStatusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maritalStatusDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passportNoDataGridViewTextBoxColumn
+            // 
+            this.passportNoDataGridViewTextBoxColumn.DataPropertyName = "PassportNo";
+            this.passportNoDataGridViewTextBoxColumn.HeaderText = "PassportNo";
+            this.passportNoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passportNoDataGridViewTextBoxColumn.Name = "passportNoDataGridViewTextBoxColumn";
+            this.passportNoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passportNoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // courseDataGridViewTextBoxColumn
+            // 
+            this.courseDataGridViewTextBoxColumn.DataPropertyName = "Course";
+            this.courseDataGridViewTextBoxColumn.HeaderText = "Course";
+            this.courseDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
+            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
+            this.courseDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // applicantBindingSource
+            // 
+            this.applicantBindingSource.DataSource = typeof(WIUT.DAL.Applicant);
+            // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -89,6 +165,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -99,6 +176,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -177,82 +255,6 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
-            this.surnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.surnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addressDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // doBDataGridViewTextBoxColumn
-            // 
-            this.doBDataGridViewTextBoxColumn.DataPropertyName = "DoB";
-            this.doBDataGridViewTextBoxColumn.HeaderText = "Date of birth";
-            this.doBDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.doBDataGridViewTextBoxColumn.Name = "doBDataGridViewTextBoxColumn";
-            this.doBDataGridViewTextBoxColumn.ReadOnly = true;
-            this.doBDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // maritalStatusDataGridViewTextBoxColumn
-            // 
-            this.maritalStatusDataGridViewTextBoxColumn.DataPropertyName = "MaritalStatus";
-            this.maritalStatusDataGridViewTextBoxColumn.HeaderText = "MaritalStatus";
-            this.maritalStatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maritalStatusDataGridViewTextBoxColumn.Name = "maritalStatusDataGridViewTextBoxColumn";
-            this.maritalStatusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maritalStatusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passportNoDataGridViewTextBoxColumn
-            // 
-            this.passportNoDataGridViewTextBoxColumn.DataPropertyName = "PassportNo";
-            this.passportNoDataGridViewTextBoxColumn.HeaderText = "PassportNo";
-            this.passportNoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passportNoDataGridViewTextBoxColumn.Name = "passportNoDataGridViewTextBoxColumn";
-            this.passportNoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.passportNoDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // courseDataGridViewTextBoxColumn
-            // 
-            this.courseDataGridViewTextBoxColumn.DataPropertyName = "Course";
-            this.courseDataGridViewTextBoxColumn.HeaderText = "Course";
-            this.courseDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
-            this.courseDataGridViewTextBoxColumn.ReadOnly = true;
-            this.courseDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // applicantBindingSource
-            // 
-            this.applicantBindingSource.DataSource = typeof(WIUT.DAL.Applicant);
             // 
             // ApplicantListForm
             // 

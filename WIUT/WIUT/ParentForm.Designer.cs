@@ -83,13 +83,14 @@
             // newApplicantToolStripMenuItem
             // 
             this.newApplicantToolStripMenuItem.Name = "newApplicantToolStripMenuItem";
-            this.newApplicantToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.newApplicantToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.newApplicantToolStripMenuItem.Text = "New applicant";
+            this.newApplicantToolStripMenuItem.Click += new System.EventHandler(this.newApplicantToolStripMenuItem_Click);
             // 
             // allApplicantsToolStripMenuItem
             // 
             this.allApplicantsToolStripMenuItem.Name = "allApplicantsToolStripMenuItem";
-            this.allApplicantsToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.allApplicantsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.allApplicantsToolStripMenuItem.Text = "All applicants";
             this.allApplicantsToolStripMenuItem.Click += new System.EventHandler(this.allApplicantsToolStripMenuItem_Click);
             // 
@@ -105,13 +106,14 @@
             // newCourseToolStripMenuItem
             // 
             this.newCourseToolStripMenuItem.Name = "newCourseToolStripMenuItem";
-            this.newCourseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.newCourseToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.newCourseToolStripMenuItem.Text = "New course";
+            this.newCourseToolStripMenuItem.Click += new System.EventHandler(this.newCourseToolStripMenuItem_Click);
             // 
             // allCoursesToolStripMenuItem
             // 
             this.allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
-            this.allCoursesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.allCoursesToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.allCoursesToolStripMenuItem.Text = "All courses";
             this.allCoursesToolStripMenuItem.Click += new System.EventHandler(this.allCoursesToolStripMenuItem_Click);
             // 
