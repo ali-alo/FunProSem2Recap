@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 namespace WIUT.DAL
 {
-    class ApplicantManager
+    public class ApplicantManager : DbManager  // Inheritance 
     {
         public void Create(Applicant a)
         {
-            var connection = new SqlCeConnection("");
+            // Connection is used to make sure that we address the needed database
+            var connection = Connection;
             try
             {
                 var sql = $@"
@@ -38,7 +39,7 @@ VALUES('{a.Name}', '{a.Surname}', '{a.Address}', '{a.DoB:yyyy-MM-dd}', '{a.Marit
 
         public void Update(Applicant a)
         {
-            var connection = new SqlCeConnection("");
+            var connection = Connection;
             try
             {
                 var sql = $@"
@@ -70,7 +71,7 @@ WHERE Id = {a.Id}";
 
         public void Delete(int id)
         {
-            var connection = new SqlCeConnection("");
+            var connection = Connection;
             try
             {
                 var sql = $"DELETE FROM Applicant Where Id={id}";
@@ -93,7 +94,7 @@ WHERE Id = {a.Id}";
 
         public Applicant GetById(int id)
         {
-            var connection = new SqlCeConnection("");
+            var connection = Connection;
             try
             {
                 var sql = $@"
@@ -127,7 +128,7 @@ WHERE Id = {id}";
 
         public List<Applicant> GetAll()
         {
-            var connection = new SqlCeConnection("");
+            var connection = Connection;
             var result = new List<Applicant>();
             try
             {

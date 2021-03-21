@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 namespace WIUT.DAL
 {
-    class CourseManager
+    public class CourseManager : DbManager
     {
         public void Create(Course c)
         {
-            var connection = new SqlCeConnection("");
+            // Connection is used to make sure that we address the needed database
+            var connection = Connection;
             try
             {
                 var sql = $"INSERT INTO Course (Name) VALUES ('{c.Name}')";
@@ -36,7 +37,7 @@ namespace WIUT.DAL
 
         public void Update(Course c)
         {
-            var connection = new SqlCeConnection("");
+            var connection = Connection;
             try
             {
                 var sql = $"UPDATE Course SET Name = '{c.Name}' WHERE Id = {c.Id}";
@@ -59,7 +60,7 @@ namespace WIUT.DAL
 
         public void Delete(int id)
         {
-            var connection = new SqlCeConnection("");
+            var connection = Connection;
             try
             {
                 var sql = $"DELETE FROM Course WHERE Id={id}";
@@ -82,7 +83,7 @@ namespace WIUT.DAL
 
         public Course GetById(int id)
         {
-            var connection = new SqlCeConnection("");
+            var connection = Connection;
             try
             {
                 var sql = $"SELECT Id, Name FROM Course WHERE ID={id}";
@@ -116,7 +117,7 @@ namespace WIUT.DAL
 
         public List<Course> GetAll()
         {
-            var connection = new SqlCeConnection("");
+            var connection = Connection;
             var result = new List<Course>();
             try
             {

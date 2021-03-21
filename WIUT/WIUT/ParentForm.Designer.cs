@@ -32,13 +32,13 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.applicantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allCoursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newApplicantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allApplicantsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allCoursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +67,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -80,6 +80,18 @@
             this.applicantsToolStripMenuItem.Size = new System.Drawing.Size(93, 24);
             this.applicantsToolStripMenuItem.Text = "Applicants";
             // 
+            // newApplicantToolStripMenuItem
+            // 
+            this.newApplicantToolStripMenuItem.Name = "newApplicantToolStripMenuItem";
+            this.newApplicantToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.newApplicantToolStripMenuItem.Text = "New applicant";
+            // 
+            // allApplicantsToolStripMenuItem
+            // 
+            this.allApplicantsToolStripMenuItem.Name = "allApplicantsToolStripMenuItem";
+            this.allApplicantsToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
+            this.allApplicantsToolStripMenuItem.Text = "All applicants";
+            // 
             // coursesToolStripMenuItem
             // 
             this.coursesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -88,6 +100,18 @@
             this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
             this.coursesToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.coursesToolStripMenuItem.Text = "Courses";
+            // 
+            // newCourseToolStripMenuItem
+            // 
+            this.newCourseToolStripMenuItem.Name = "newCourseToolStripMenuItem";
+            this.newCourseToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.newCourseToolStripMenuItem.Text = "New course";
+            // 
+            // allCoursesToolStripMenuItem
+            // 
+            this.allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
+            this.allCoursesToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.allCoursesToolStripMenuItem.Text = "All courses";
             // 
             // helpToolStripMenuItem
             // 
@@ -100,33 +124,9 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(133, 26);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
-            // 
-            // newCourseToolStripMenuItem
-            // 
-            this.newCourseToolStripMenuItem.Name = "newCourseToolStripMenuItem";
-            this.newCourseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.newCourseToolStripMenuItem.Text = "New course";
-            // 
-            // allCoursesToolStripMenuItem
-            // 
-            this.allCoursesToolStripMenuItem.Name = "allCoursesToolStripMenuItem";
-            this.allCoursesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.allCoursesToolStripMenuItem.Text = "All courses";
-            // 
-            // newApplicantToolStripMenuItem
-            // 
-            this.newApplicantToolStripMenuItem.Name = "newApplicantToolStripMenuItem";
-            this.newApplicantToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.newApplicantToolStripMenuItem.Text = "New applicant";
-            // 
-            // allApplicantsToolStripMenuItem
-            // 
-            this.allApplicantsToolStripMenuItem.Name = "allApplicantsToolStripMenuItem";
-            this.allApplicantsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.allApplicantsToolStripMenuItem.Text = "All applicants";
             // 
             // ParentForm
             // 
@@ -139,6 +139,7 @@
             this.Name = "ParentForm";
             this.Text = "WIUT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ParentForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

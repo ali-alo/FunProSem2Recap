@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WIUT.DAL;
 
 namespace WIUT
 {
@@ -26,6 +27,14 @@ namespace WIUT
         {
             var form = new AboutForm();
             form.ShowDialog();
+        }
+
+        // testing
+        private void ParentForm_Load(object sender, EventArgs e)
+        {
+            var courseList = new CourseList();
+            var courses = courseList.GetAllCourses();
+            MessageBox.Show(courses.Count.ToString());
         }
     }
 }

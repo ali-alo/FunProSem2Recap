@@ -6,3 +6,4 @@ C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\r
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT.DAL\obj\Debug\WIUT.DAL.csproj.CopyComplete
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT.DAL\obj\Debug\WIUT.DAL.dll
 C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT.DAL\obj\Debug\WIUT.DAL.pdb
+C:\Users\ASus\Documents\WIUT study 2020 2 semester\fundamentals_of_programming\recap\WIUT\WIUT.DAL\bin\Debug\WIUT.DAL.dll.config
